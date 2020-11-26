@@ -8,4 +8,6 @@ for (let indexNumbers = 0 ; indexNumbers < numbers.length ; indexNumbers += 1) {
 }
 if (oddInNumbers > 0) {
   console.log('Existem ' + oddInNumbers + ' números ímpares no array.')
+} else {
+  console.log('Nenhum valor ímpar encontrado.')
 }
