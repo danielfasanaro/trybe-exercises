@@ -5,4 +5,4 @@ for ( let indexNumbers = 0 ; indexNumbers < numbers.length ; indexNumbers += 1) 
   sumOfNumbers = sumOfNumbers + numbers[indexNumbers];
 }
 
-console.log('A soma dos números do array é: ' + sumOfNumbers);
+console.log('A média aritmética dos números do array é: ' + (sumOfNumbers/numbers.length));
