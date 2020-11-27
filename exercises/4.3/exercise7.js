@@ -3,7 +3,7 @@ let minOfNumbers = numbers[0];
 
 for ( let indexNumbers = 1 ; indexNumbers < numbers.length ; indexNumbers += 1) {
   if (numbers[indexNumbers] < minOfNumbers) {
-    maxOfNumbers = numbers[indexNumbers];
+    minOfNumbers = numbers[indexNumbers];
   }
 }
 console.log('O menor número é: ' + minOfNumbers);
