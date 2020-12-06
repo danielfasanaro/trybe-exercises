@@ -100,11 +100,11 @@ function addMouseZoom() {
 addMouseZoom();
 
 function mouseOverZoom(event) {
-  event.target.style.fontSize = '30px';
+  event.target.style.transform = 'scale(2)';
 }
 
 function mouseOutZoom(event) {
-  event.target.style.fontSize = '20px';
+  event.target.style.transform = 'scale(1)';
 }
 
 // Exercício 7:
@@ -122,21 +122,40 @@ function addTaskLabel(color) {
   taskLabel.className = 'task';
   document.querySelector('div.my-tasks').appendChild(taskLabel);
 }
-addTaskLabel('red');
+addTaskLabel('white');
 
-// Exercício 9;
+// Exercício 9:
 function addOnClickLabel() {
   let selectedTask = document.querySelector('div.task');
   selectedTask.addEventListener('click', changeClassTask);
-  console.log('teste');
 }
 addOnClickLabel();
 
 function changeClassTask(event) {
-  console.log(event.target);
   if (event.target.className === 'task selected') {
     event.target.className = 'task';
+    event.target.style.backgroundColor = 'white'
   } else {
     event.target.className = 'task selected';
+    event.target.style.backgroundColor = 'red'
+  }
+}
+
+// Exercício 10:
+function addOnSelectDay() {
+  let days = document.querySelectorAll('.day');
+  for (let index = 0; index < days.length; index += 1) {
+    days[index].addEventListener('click', mouseClickSelect);
+  }
+}
+addOnSelectDay();
+
+function mouseClickSelect(event) {
+  let selectedTask = document.querySelector('.selected');
+  let dayColor = event.target.style.color;
+  if (dayColor === selectedTask.style.backgroundColor) {
+    event.target.style.color = '';
+  } else {
+    event.target.style.color = selectedTask.style.backgroundColor;
   }
 }
