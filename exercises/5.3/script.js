@@ -116,3 +116,11 @@ function addTask(taskName) {
 addTask('My Task');
 
 // Exercício 8:
+function addTaskLabel(color) {
+  let taskLabel = document.createElement('div');
+  taskLabel.style.backgroundColor = color;
+  taskLabel.className = 'task';
+  console.log(color);
+  document.querySelector('div.my-tasks').appendChild(taskLabel);
+}
+addTaskLabel('red')
