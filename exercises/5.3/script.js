@@ -106,3 +106,11 @@ function mouseOverZoom(event) {
 function mouseOutZoom(event) {
   event.target.style.fontSize = '20px';
 }
+
+// Exercício 7:
+function addTask(taskName) {
+  let task = document.createElement('span');
+  task.innerText = taskName;
+  document.querySelector('.my-tasks').appendChild(task);
+}
+addTask('My Task');
