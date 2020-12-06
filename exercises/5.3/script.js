@@ -59,3 +59,13 @@ function clickChangeBackground() {
     holidays[index].style.backgroundColor = color;
   }
 }
+
+// Exercício 4:
+function createFridayButton (buttonName) {
+  let fridayButton = document.createElement('button');
+  fridayButton.name = buttonName;
+  fridayButton.innerText = buttonName;
+  fridayButton.id = 'btn-friday';
+  document.querySelector('.buttons-container').appendChild(fridayButton);
+}
+createFridayButton('Sexta-feira');
