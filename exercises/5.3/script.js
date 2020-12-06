@@ -43,11 +43,11 @@ function createHolidaysButton (buttonName) {
 createHolidaysButton('Feriados');
 
 // Exercício 3:
-function addOnClick(buttonId) {
+function addOnClickHoliday(buttonId) {
   let holidayButton = document.querySelector('#' + buttonId);
   holidayButton.addEventListener('click', clickChangeBackground);
 }
-addOnClick('btn-holiday');
+addOnClickHoliday('btn-holiday');
 
 function clickChangeBackground() {
   let holidays = document.querySelectorAll('.holiday');
@@ -69,3 +69,22 @@ function createFridayButton (buttonName) {
   document.querySelector('.buttons-container').appendChild(fridayButton);
 }
 createFridayButton('Sexta-feira');
+
+// Exercício 5:
+function addOnClickFriday(buttonId) {
+  let fridayButton = document.querySelector('#' + buttonId);
+  fridayButton.addEventListener('click', clickChangeText);
+}
+addOnClickFriday('btn-friday');
+
+function clickChangeText() {
+  let fridays = document.querySelectorAll('.friday');
+  for (let index = 0; index < fridays.length; index += 1) {
+    if (fridays[index].innerText !== "Its Friday then..") {
+      fridays[index].innerText = "Its Friday then..";
+    } else {
+      let friday = parseInt(fridays[index].nextElementSibling.innerText) - 1;
+      fridays[index].innerText =  friday.toString();
+    }
+  }
+}
