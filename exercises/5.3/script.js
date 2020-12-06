@@ -100,7 +100,7 @@ function addMouseZoom() {
 addMouseZoom();
 
 function mouseOverZoom(event) {
-  event.target.style.fontSize = '40px';
+  event.target.style.fontSize = '30px';
 }
 
 function mouseOutZoom(event) {
@@ -120,7 +120,23 @@ function addTaskLabel(color) {
   let taskLabel = document.createElement('div');
   taskLabel.style.backgroundColor = color;
   taskLabel.className = 'task';
-  console.log(color);
   document.querySelector('div.my-tasks').appendChild(taskLabel);
 }
-addTaskLabel('red')
+addTaskLabel('red');
+
+// Exercício 9;
+function addOnClickLabel() {
+  let selectedTask = document.querySelector('div.task');
+  selectedTask.addEventListener('click', changeClassTask);
+  console.log('teste');
+}
+addOnClickLabel();
+
+function changeClassTask(event) {
+  console.log(event.target);
+  if (event.target.className === 'task selected') {
+    event.target.className = 'task';
+  } else {
+    event.target.className = 'task selected';
+  }
+}
