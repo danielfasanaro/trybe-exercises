@@ -114,3 +114,5 @@ function addTask(taskName) {
   document.querySelector('.my-tasks').appendChild(task);
 }
 addTask('My Task');
+
+// Exercício 8:
