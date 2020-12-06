@@ -88,3 +88,21 @@ function clickChangeText() {
     }
   }
 }
+
+// Exercício 6:
+function addMouseZoom() {
+  let days = document.querySelectorAll('.day');
+  for (let index = 0; index < days.length; index += 1) {
+    days[index].addEventListener('mouseover', mouseOverZoom);
+    days[index].addEventListener('mouseout', mouseOutZoom);
+  }
+}
+addMouseZoom();
+
+function mouseOverZoom(event) {
+  event.target.style.fontSize = '40px';
+}
+
+function mouseOutZoom(event) {
+  event.target.style.fontSize = '20px';
+}
