@@ -22,7 +22,6 @@ function createDaysOfTheMonth() {
     let days = dezDays.appendChild(document.createElement('li'));
     days.className = 'day';
     days.innerText = dezDaysList[index];
-    console.log(dezDays);
     if (dezDaysList[index] == 24 || dezDaysList[index] == 25 || dezDaysList[index] == 31) {
       days.className += ' holiday';
     }
@@ -42,3 +41,21 @@ function createHolidaysButton (buttonName) {
   document.querySelector('.buttons-container').appendChild(holidayButton);
 }
 createHolidaysButton('Feriados');
+
+// Exercício 3:
+function addOnClick(buttonId) {
+  let holidayButton = document.querySelector('#' + buttonId);
+  holidayButton.addEventListener('click', clickChangeBackground);
+}
+addOnClick('btn-holiday');
+
+function clickChangeBackground() {
+  let holidays = document.querySelectorAll('.holiday');
+  for (let index = 0; index < holidays.length; index += 1) {
+    let color = 'blue';
+    if (holidays[index].style.backgroundColor === color) {
+      color = '';
+    }
+    holidays[index].style.backgroundColor = color;
+  }
+}
