@@ -80,8 +80,8 @@ addOnClickFriday('btn-friday');
 function clickChangeText() {
   let fridays = document.querySelectorAll('.friday');
   for (let index = 0; index < fridays.length; index += 1) {
-    if (fridays[index].innerText !== "Its Friday then..") {
-      fridays[index].innerText = "Its Friday then..";
+    if (fridays[index].innerText !== "Its Friday then...") {
+      fridays[index].innerText = "Its Friday then...";
     } else {
       let friday = parseInt(fridays[index].nextElementSibling.innerText) - 1;
       fridays[index].innerText =  friday.toString();
