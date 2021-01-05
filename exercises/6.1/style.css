@@ -1,0 +1,7 @@
+input {
+  display: block;
+}
+
+input[type = 'radio'] {
+  display: inline-block;
+}
