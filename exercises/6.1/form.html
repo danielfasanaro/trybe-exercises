@@ -8,38 +8,42 @@
 </head>
 <body>
   <form action="">
-    <fieldset>
+    <fieldset id="personal">
       <label for="name">Nome:</label>
-      <input type="text" id="name" maxlength="40">
+      <input type="text" id="name" name="name" maxlength="40" required>
       <label for="email">Email:</label>
-      <input type="text" id="email" maxlength="50">
+      <input type="text" id="email" name="email" maxlength="50" required>
       <label for="cpf">CPF:</label>
-      <input type="text" maxlength="11">
+      <input type="text" id="cpf" name="cpf" maxlength="11" required>
       <label for="adress">Endereço:</label>
-      <input type="text" maxlength="200">
+      <input type="text" id="adress" name="adress" maxlength="200" required>
       <label for="city">Cidade:</label>
-      <input type="text" maxlength="28">
+      <input type="text" id="city" name="city" maxlength="28" required>
       <label for="state">Estado:</label>
-      <select name="state" id="state"></select>
+      <select name="state" id="state"></select required>
       <br>
-      <label for="type">Tipo:</label>
-      <input type="radio" name="type" id="radio-house">
+      <label for="type" id="type">Tipo:</label>
+      <input type="radio" name="type" id="radio-house" value="Casa" required>
       <label for="radio-house">Casa</label>
-      <input type="radio" name="type" id="radio-apartment">
+      <input type="radio" name="type" id="radio-apartment" value="Apartamento" required>
       <label for="radio-apartment">Apartamento</label>
     </fieldset>
-    <fieldset>
+    <fieldset id="professional">
       <label for="resume">Resumo do Currículo:</label>
-      <textarea name="resume" id="resume" cols="20" rows="1" maxlength="1000"></textarea>
+      <textarea name="resume" id="resume" cols="20" rows="1" maxlength="1000"></textarea required>
       <br>
       <label for="role">Cargo:</label>
-      <input type="text" name="role" id="role" maxlength="40">
+      <input type="text" name="role" id="role" maxlength="40" required>
       <label for="role-description">Descrição de Cargo:</label>
-      <input type="text" name="role-description" id="role-description" maxlength="500">
+      <input type="text" name="role-description" id="role-description" maxlength="500" required>
       <label for="start-date">Data de Início:</label>
-      <input type="text" name="start-date" id="start-date" placeholder="dd/mm/aaaa" maxlength="10">
+      <input type="text" name="start-date" id="start-date" placeholder="dd/mm/aaaa" maxlength="10" required>
     </fieldset>
+    <button type="submit" id="send-form">Enviar Formulário</button>
+    <button type="button" id="clean-form">Limpar Formulário</button>
   </form>
+  <div id="form-output">
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
