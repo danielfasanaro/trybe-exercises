@@ -54,6 +54,8 @@ const orderModifier = (order) => {
       allFlavors = flavors[index];
     }
   }
+  order.name = 'Luiz Silva';
+  order.payment.total = 50;
   // console.log(allFlavors);
   console.log(`Olá ${order.name}, o total do seu pedido de ${allFlavors} e ${order.order.drinks.coke.type} é R$ ${order.payment.total.toFixed(2)}`);
 }
