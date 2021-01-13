@@ -43,7 +43,19 @@ customerInfo(order);
 
 const orderModifier = (order) => {
   // Adicione abaixo as informações necessárias.
-
+  const flavors = Object.keys(order.order.pizza);
+  // const flavors = ['margherita', 'margherita', 'margherita', 'margherita', 'margherita']
+  let allFlavors = '';
+  for (let index = 0; index < flavors.length; index += 1) {
+    if (allFlavors){
+      allFlavors = `${allFlavors}, ${flavors[index]}`
+    }
+    else {
+      allFlavors = flavors[index];
+    }
+  }
+  // console.log(allFlavors);
+  console.log(`Olá ${order.name}, o total do seu pedido de ${allFlavors} e ${order.order.drinks.coke.type} é R$ ${order.payment.total.toFixed(2)}`);
 }
 
 orderModifier(order);
