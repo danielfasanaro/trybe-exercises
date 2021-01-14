@@ -30,4 +30,22 @@ const getStudentsBySubject = function(object, subject) {
   return numberOfStudents;
 }
 
-console.log(getStudentsBySubject(allLessons, 'Matemática'));
+const createReport = function(object, professor) {
+  const subjects = [];
+  let students = 0;
+  for (let key in object) {
+    if (object[key]['professor'] === professor){
+      students += object[key]['numeroEstudantes'];
+      subjects.push(object[key].materia);
+    }
+  }
+  const report = {
+    'professor': professor,
+    aulas: subjects,
+    estudantes: students,
+  };
+  return report;
+}
+
+// console.log(getStudentsBySubject(allLessons, 'Matemática'));
+console.log(createReport(allLessons, 'Maria Clara'));
