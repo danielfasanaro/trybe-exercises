@@ -61,11 +61,16 @@ const getValueByNumber = function(object, index) {
   return Object.values(object)[index];
 }
 
+const verifyPair = function(object, key, value) {
+  return Object.entries(object).find((currentValue) => (currentValue[0] === key && currentValue[1] === value) ? true : false) ? true : false;
+}
+
 // console.log(lesson2);
 // console.log(listKeys(lesson2));
 // console.log(sizeOfObject(lesson2));
 // console.log(listValues(lesson2));
 // console.log(allLessons);
 // console.log(getNumberOfStudents(allLessons));
-console.log(getValueByNumber(lesson1, 0));
+// console.log(getValueByNumber(lesson1, 0));
+// console.log(verifyPair(lesson3, 'turno', 'noite'));
 
