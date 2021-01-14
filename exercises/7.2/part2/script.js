@@ -57,10 +57,15 @@ const getNumberOfStudents = function(object) {
   return numberOfStudents;
 }
 
-console.log(getNumberOfStudents(allLessons));
+const getValueByNumber = function(object, index) {
+  return Object.values(object)[index];
+}
+
 // console.log(lesson2);
 // console.log(listKeys(lesson2));
 // console.log(sizeOfObject(lesson2));
 // console.log(listValues(lesson2));
 // console.log(allLessons);
+// console.log(getNumberOfStudents(allLessons));
+console.log(getValueByNumber(lesson1, 0));
 
