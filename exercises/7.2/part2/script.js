@@ -36,7 +36,22 @@ const listValues = function(object) {
   return Object.values(object);
 }
 
+// const allLessons = {
+//   lesson1: Object.assign({}, lesson1),
+//   lesson2: Object.assign({}, lesson2),
+//   lesson3: Object.assign({}, lesson3)
+// };
+
+// const allLessons = {};
+// allLessons['lesson1'] = Object.assign({}, lesson1);
+// allLessons['lesson2'] = Object.assign({}, lesson2);
+// allLessons['lesson3'] = Object.assign({}, lesson3);
+
+const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
+
+
 // console.log(lesson2);
 // console.log(listKeys(lesson2));
 // console.log(sizeOfObject(lesson2));
 // console.log(listValues(lesson2));
+console.log(allLessons);
